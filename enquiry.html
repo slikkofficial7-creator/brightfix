@@ -1,247 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Enquiry | BrightFix Electrical Services</title>
-
+    <meta name="description" content="Submit a service enquiry for electrical installation, repairs, maintenance or safety inspections with BrightFix Electrical Services in Gauteng.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111111">
+    <title>Request an Electrical Service | BrightFix</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
-
-    <!-- Header and Navigation -->
-    <header>
-        <nav>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="BrightFix Electrical Services home">BrightFix <span>Electrical Services</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
-            <a href="enquiry.html">Enquiry</a>
+            <a href="enquiry.html" aria-current="page">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
+    </div>
+</header>
 
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Enquiry Introduction -->
-        <section class="enquiry-section">
-
-            <h1>Make an Enquiry</h1>
-
-            <p>
-                Complete the form below to tell us about the electrical
-                service you require. A member of the BrightFix team
-                can then review your enquiry.
-            </p>
-
-        </section>
-
-
-        <!-- Enquiry Form -->
-        <section class="enquiry-form">
-
+<main id="main-content" class="container">
+    <section class="page-intro">
+        <p class="eyebrow">Service request</p>
+        <h1>Make an Enquiry</h1>
+        <p class="lead">Complete the form to describe the electrical service you need. JavaScript and HTML check the entries in this student demonstration.</p>
+    </section>
+    <section class="section">
+        <div class="form-panel">
             <h2>Service Request Form</h2>
-
-            <form action="#" method="post">
-
-                <!-- Full Name -->
-                <label for="name">Full Name:</label>
-
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your full name"
-                    required
-                >
-
-
-                <!-- Email -->
-                <label for="email">Email Address:</label>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    required
-                >
-
-
-                <!-- Telephone -->
-                <label for="telephone">Telephone Number:</label>
-
-                <input
-                    type="tel"
-                    id="telephone"
-                    name="telephone"
-                    placeholder="Enter your telephone number"
-                    required
-                >
-
-
-                <!-- Customer Type -->
-                <label for="customer-type">
-                    Customer Type:
-                </label>
-
-                <select id="customer-type" name="customer-type" required>
-
-                    <option value="">
-                        Please select
-                    </option>
-
-                    <option value="residential">
-                        Residential Customer
-                    </option>
-
-                    <option value="small-business">
-                        Small Business
-                    </option>
-
-                    <option value="property-manager">
-                        Property Manager
-                    </option>
-
-                    <option value="other">
-                        Other
-                    </option>
-
-                </select>
-
-
-                <!-- Service Required -->
-                <label for="service">
-                    Service Required:
-                </label>
-
-                <select id="service" name="service" required>
-
-                    <option value="">
-                        Please select
-                    </option>
-
-                    <option value="installation">
-                        Electrical Installation
-                    </option>
-
-                    <option value="repairs">
-                        Electrical Repairs
-                    </option>
-
-                    <option value="maintenance">
-                        Electrical Maintenance
-                    </option>
-
-                    <option value="inspection">
-                        Electrical Safety Inspection
-                    </option>
-
-                    <option value="commercial">
-                        Commercial Electrical Services
-                    </option>
-
-                    <option value="other">
-                        Other
-                    </option>
-
-                </select>
-
-
-                <!-- Preferred Date -->
-                <label for="date">
-                    Preferred Date:
-                </label>
-
-                <input
-                    type="date"
-                    id="date"
-                    name="date"
-                >
-
-
-                <!-- Preferred Time -->
-                <label for="time">
-                    Preferred Time:
-                </label>
-
-                <input
-                    type="time"
-                    id="time"
-                    name="time"
-                >
-
-
-                <!-- Address -->
-                <label for="address">
-                    Service Address:
-                </label>
-
-                <input
-                    type="text"
-                    id="address"
-                    name="address"
-                    placeholder="Enter the service address"
-                >
-
-
-                <!-- Message -->
-                <label for="message">
-                    Describe Your Requirement:
-                </label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="7"
-                    placeholder="Please describe the electrical service you require."
-                    required
-                ></textarea>
-
-
-                <!-- Submit Button -->
-                <button type="submit">
-                    Submit Enquiry
-                </button>
-
+            <form data-demo-form>
+                <div class="form-grid">
+                    <div class="field-group"><label for="name">Full name *</label><input type="text" id="name" name="name" placeholder="Enter your full name" minlength="2" maxlength="80" autocomplete="name" required></div>
+                    <div class="field-group"><label for="email">Email address *</label><input type="email" id="email" name="email" placeholder="name@example.com" maxlength="120" autocomplete="email" required></div>
+                    <div class="field-group"><label for="telephone">Telephone number *</label><input type="tel" id="telephone" name="telephone" placeholder="e.g. 082 123 4567" autocomplete="tel" required pattern="[0-9\s\(\)\-+]{7,20}" title="Use 7–20 characters: digits, spaces, +, brackets or hyphens."></div>
+                    <div class="field-group"><label for="customer-type">Customer type *</label><select id="customer-type" name="customer-type" required><option value="">Please select</option><option value="residential">Residential customer</option><option value="small-business">Small business</option><option value="property-manager">Property manager</option><option value="other">Other</option></select></div>
+                    <div class="field-group"><label for="service-required">Service required *</label><select id="service-required" name="service-required" required><option value="">Please select</option><option value="installation">Electrical installation</option><option value="repair">Electrical repairs</option><option value="maintenance">Electrical maintenance</option><option value="safety">Electrical safety inspection</option><option value="commercial">Commercial electrical services</option><option value="other">Other</option></select></div>
+                    <div class="field-group"><label for="address">Service address</label><input type="text" id="address" name="address" autocomplete="street-address" maxlength="180" placeholder="Street, suburb and city"></div>
+                    <div class="field-group"><label for="date">Preferred date</label><input type="date" id="date" name="date"></div>
+                    <div class="field-group"><label for="time">Preferred time</label><input type="time" id="time" name="time"></div>
+                    <div class="field-group field-full"><label for="message">Describe your requirement *</label><textarea id="message" name="message" rows="6" minlength="10" maxlength="1500" placeholder="Describe the work or issue" required></textarea></div>
+                    <div class="field-group field-full"><button type="submit">Validate Enquiry</button></div>
+                </div>
+                <p class="form-note">* Required fields. This assignment version validates information in the browser only. It does not transmit or store personal information.</p>
+                <p class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1" hidden></p>
             </form>
-
-        </section>
-
-
-        <!-- Additional Information -->
-        <section class="introduction">
-
-            <h2>Need Help?</h2>
-
-            <p>
-                If you are unsure which service you require,
-                contact BrightFix and we will assist you.
-            </p>
-
-            <a href="contact.html" class="button">
-                Contact Us
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            &copy; 2026 BrightFix Electrical Services.
-            All rights reserved.
-        </p>
-
-    </footer>
-
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; <span data-current-year>2026</span> BrightFix Electrical Services. Student project demonstration.</p>
+        <p><a href="contact.html">Contact us</a> · <a href="enquiry.html">Request a service</a></p>
+    </div>
+</footer>
 </body>
-
 </html>

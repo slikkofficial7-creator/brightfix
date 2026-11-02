@@ -1,183 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Services | BrightFix Electrical Services</title>
-
+    <meta name="description" content="Search BrightFix electrical installation, repair, maintenance, safety inspection and commercial electrical services in Gauteng.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111111">
+    <title>Electrical Services in Gauteng | BrightFix</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
-
 <body>
-
-    <!-- Header and Navigation -->
-    <header>
-        <nav>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="BrightFix Electrical Services home">BrightFix <span>Electrical Services</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
+            <a href="services.html" aria-current="page">Services</a>
             <a href="enquiry.html">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
-    </header>
+    </div>
+</header>
 
+<main id="main-content" class="container">
+    <section class="page-intro">
+        <p class="eyebrow">What we do</p>
+        <h1>Our Electrical Services</h1>
+        <p class="lead">Search, filter or sort the service list. Select a service to open the enquiry form with the service preselected.</p>
+    </section>
+    <section class="section" aria-labelledby="service-list-heading">
+        <h2 id="service-list-heading">Find a service</h2>
+        <div class="filter-panel">
+            <div class="field-group">
+                <label for="service-search">Search services</label>
+                <input type="search" id="service-search" placeholder="Try repair, lighting or safety" autocomplete="off">
+            </div>
+            <div class="field-group">
+                <label for="service-category">Filter by category</label>
+                <select id="service-category">
+                    <option value="">All categories</option>
+                    <option value="installation">Installation</option>
+                    <option value="repair">Repair</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="safety">Safety</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="service-sort">Sort results</label>
+                <select id="service-sort">
+                    <option value="default">Default order</option>
+                    <option value="name-asc">Name A–Z</option>
+                    <option value="name-desc">Name Z–A</option>
+                </select>
+            </div>
+        </div>
+        <p id="service-results-count" class="results-count" aria-live="polite">Loading services…</p>
+        <div id="services-grid" class="cards-grid" aria-live="polite"></div>
+        <noscript><p class="empty-state">JavaScript is required to load and filter the service cards. Enable JavaScript in your browser to use this feature.</p></noscript>
+    </section>
 
-    <!-- Main Content -->
-    <main>
+    <section class="section section-muted">
+        <p class="eyebrow">Project gallery</p>
+        <h2>Electrical service images</h2>
+        <p>Select an image to view it larger. Images are supplied with this student project.</p>
+        <div class="gallery-grid">
+            <button class="gallery-open" type="button" data-lightbox-src="images/hero.jpg" data-lightbox-alt="Electrician working on an electrical installation" data-lightbox-caption="Electrical work"><img src="images/hero.jpg" srcset="images/hero-480.jpg 480w, images/hero.jpg 960w" sizes="(max-width: 680px) 50vw, (max-width: 960px) 33vw, 200px" alt="Electrician working on an electrical installation" loading="lazy"><span class="gallery-caption">Electrical work</span></button>
+            <button class="gallery-open" type="button" data-lightbox-src="images/installation.jpg" data-lightbox-alt="Electrical installation work" data-lightbox-caption="Installation"><img src="images/installation.jpg" srcset="images/installation-480.jpg 480w, images/installation.jpg 960w" sizes="(max-width: 680px) 50vw, (max-width: 960px) 33vw, 200px" alt="Electrical installation work" loading="lazy"><span class="gallery-caption">Installation</span></button>
+            <button class="gallery-open" type="button" data-lightbox-src="images/repair.jpg" data-lightbox-alt="Electrician repairing electrical equipment" data-lightbox-caption="Repairs"><img src="images/repair.jpg" srcset="images/repair-480.jpg 480w, images/repair.jpg 960w" sizes="(max-width: 680px) 50vw, (max-width: 960px) 33vw, 200px" alt="Electrician repairing electrical equipment" loading="lazy"><span class="gallery-caption">Repairs</span></button>
+            <button class="gallery-open" type="button" data-lightbox-src="images/maintenance.jpg" data-lightbox-alt="Electrical maintenance work" data-lightbox-caption="Maintenance"><img src="images/maintenance.jpg" srcset="images/maintenance-480.jpg 480w, images/maintenance.jpg 960w" sizes="(max-width: 680px) 50vw, (max-width: 960px) 33vw, 200px" alt="Electrical maintenance work" loading="lazy"><span class="gallery-caption">Maintenance</span></button>
+            <button class="gallery-open" type="button" data-lightbox-src="images/electrical-safety.jpg" data-lightbox-alt="Electrical safety inspection" data-lightbox-caption="Safety inspection"><img src="images/electrical-safety.jpg" srcset="images/electrical-safety-480.jpg 480w, images/electrical-safety.jpg 960w" sizes="(max-width: 680px) 50vw, (max-width: 960px) 33vw, 200px" alt="Electrical safety inspection" loading="lazy"><span class="gallery-caption">Safety inspection</span></button>
+        </div>
+    </section>
 
-        <!-- Services Introduction -->
-        <section class="services-section">
+    <dialog class="lightbox" id="image-lightbox" aria-labelledby="lightbox-caption">
+        <div class="lightbox-head"><h2 id="lightbox-caption">Service image</h2><button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">Close ✕</button></div>
+        <img id="lightbox-image" src="images/hero.jpg" alt="">
+        <p>Press Escape or use the Close button to return to the page.</p>
+    </dialog>
 
-            <h1>Our Electrical Services</h1>
-
-            <p>
-                BrightFix Electrical Services provides reliable and
-                professional electrical solutions for homes and
-                small businesses.
-            </p>
-
-        </section>
-
-
-        <!-- Electrical Installation -->
-        <section class="service">
-
-            <h2>Electrical Installation</h2>
-
-            <img src="images/installation.jpg"
-                 alt="Electrical installation work">
-
-            <p>
-                We provide professional electrical installation services
-                for homes and small businesses. Our services include
-                lighting, switches, electrical outlets and other
-                electrical requirements.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Enquire Now
-            </a>
-
-        </section>
-
-
-        <!-- Electrical Repairs -->
-        <section class="service">
-
-            <h2>Electrical Repairs</h2>
-
-            <img src="images/repair.jpg"
-                 alt="Electrician repairing electrical equipment">
-
-            <p>
-                Our electrical repair service assists customers with
-                electrical faults, damaged switches, sockets, lighting
-                problems and other electrical issues.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Enquire Now
-            </a>
-
-        </section>
-
-
-        <!-- Electrical Maintenance -->
-        <section class="service">
-
-            <h2>Electrical Maintenance</h2>
-
-            <img src="images/maintenance.jpg"
-                 alt="Electrical maintenance work">
-
-            <p>
-                Regular electrical maintenance can help identify
-                potential problems and keep electrical systems
-                reliable and safe.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Enquire Now
-            </a>
-
-        </section>
-
-
-        <!-- Electrical Safety Inspections -->
-        <section class="service">
-
-            <h2>Electrical Safety Inspections</h2>
-
-            <picture>
-                <source media="(max-width: 480px)" srcset="images/safety-small.jpg">
-                <source media="(max-width: 768px)" srcset="images/safety-medium.jpg">
-
-                <img 
-                    src="images/safety-large.jpg"
-                    alt="Electrical safety inspection">
-            </picture>
-
-            <p>
-                Our safety inspection service helps identify potential
-                electrical safety concerns and areas that may require
-                maintenance or attention.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Enquire Now
-            </a>
-
-        </section>
-
-
-        <!-- Commercial Electrical Services -->
-        <section class="service">
-
-            <h2>Commercial Electrical Services</h2>
-
-            <p>
-                BrightFix provides electrical support for small
-                businesses, offices and retail premises.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Enquire Now
-            </a>
-
-        </section>
-
-
-        <!-- Call to Action -->
-        <section class="introduction">
-
-            <h2>Need an Electrical Service?</h2>
-
-            <p>
-                Contact BrightFix Electrical Services to discuss
-                your electrical requirements.
-            </p>
-
-            <a href="enquiry.html" class="button">
-                Make an Enquiry
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            &copy; 2026 BrightFix Electrical Services.
-            All rights reserved.
-        </p>
-
-    </footer>
-
+    <section class="section">
+        <h2>Need advice about a service?</h2>
+        <p>Use the enquiry form to describe the work and select a preferred date and time.</p>
+        <a class="button" href="enquiry.html">Request a Service</a>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>&copy; <span data-current-year>2026</span> BrightFix Electrical Services. Student project demonstration.</p>
+        <p><a href="contact.html">Contact us</a> · <a href="enquiry.html">Request a service</a></p>
+    </div>
+</footer>
 </body>
-
 </html>
